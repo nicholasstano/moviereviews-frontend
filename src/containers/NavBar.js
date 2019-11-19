@@ -5,7 +5,9 @@ export class NavBar extends Component {
     render() {
         return (
             <div>
+                <Link className="" to="/Home">Home</Link>
                 <Link className="" to="/moviereviews">Movie Reviews</Link>
+                <Link className="" to="/episodereviews">Episode Reviews</Link>
             </div>
         )
     }
