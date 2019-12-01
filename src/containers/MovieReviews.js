@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
-import MovieReviewCard from '../components/MovieReviewCard'
+import MovieReviewTable from '../components/MovieReviewTable'
 
 export class MovieReviews extends Component {
     render() {
         return (
             <div>
                 <h1>Movie Reviews</h1>
-                <MovieReviewCard />
+                <MovieReviewTable />
             </div>
         )
     }
