@@ -78,12 +78,14 @@ export class MovieReviewTable extends Component {
                     </label>
                     <label>Director<input type="text" name="director" value={this.state.director} placeholder="Blake Edwards" onChange={this.handleMovieReviewChange} />
                     </label>
-                    <label>Stars<input type="text" name="stars" value={this.state.stars} placeholder="333" onChange={this.handleMovieReviewChange} />
-                    </label>
                     <label>Poster<input type="text" name="movie_img" value={this.state.movie_img} placeholder="https://upload.wikimedia.org/wikipedia/en/9/96/Pink_panther63.jpg" onChange={this.handleMovieReviewChange} />
                     </label>
-                    <label>Notes<textarea name="notes" value={this.state.notes} placeholder="Your notes for the recent viewing go here.........." onChange={this.handleMovieReviewChange} />
+                    <label>Stars<input type="text" name="stars" value={this.state.stars} placeholder="333" onChange={this.handleMovieReviewChange} />
                     </label>
+                    <label>Notes<input type="text" name="notes" value={this.state.notes} placeholder="notes about the viewing..." onChange={this.handleMovieReviewChange} />
+                    </label>
+                    {/* <label>Notes<textarea name="notes" value={this.state.notes} placeholder="Your notes for the recent viewing go here.........." onChange={this.handleMovieReviewChange} />
+                    </label> */}
                     <input type="submit" value="Add Movie Review" />
                 </form>
             </div><br />

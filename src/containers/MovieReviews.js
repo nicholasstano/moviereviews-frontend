@@ -13,15 +13,23 @@ export class MovieReviews extends Component {
     }
 
     addNewMovieReview = (movie) => {
-        console.log(movie)
+        console.log(movie.date, movie.title, movie.year, movie.director, movie.movie_img, movie.stars, movie.notes)
         this.setState({ allMovieReviews: [...this.state.allMovieReviews, movie] })
-        fetch(`http://localhost:3000/movies`, {
+        fetch(`http://localhost:3000/movies/`, {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json',
             },
-            body: JSON.stringify(movie)
+            body: JSON.stringify({
+                date: movie.date,
+                title: movie.title,
+                year: movie.year,
+                director: movie.director,
+                movie_img: movie.movie_img,
+                stars: movie.stars,
+                notes: movie.notes
+            })
         })
     }
 
@@ -29,8 +37,10 @@ export class MovieReviews extends Component {
         return (
             <div>
                 <h1>Movie Reviews</h1>
-                <MovieReviewTable allMovieReviews={this.state.allMovieReviews} addNewMovieReview={this.addNewMovieReview} />
-            </div>
+                <MovieReviewTable
+                    allMovieReviews={this.state.allMovieReviews} addNewMovieReview={this.addNewMovieReview}
+                />
+            </div >
         )
     }
 }

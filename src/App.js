@@ -4,6 +4,7 @@ import MovieReviews from '../src/containers/MovieReviews'
 import NavBar from '../src/containers/NavBar'
 import Home from '../src/containers/Home'
 import EpisodeReviews from '../src/containers/EpisodeReviews'
+import Actors from '../src/containers/Actors'
 
 export class App extends Component {
   render() {
@@ -30,6 +31,13 @@ export class App extends Component {
             render={() => {
               return (
                 <div><EpisodeReviews /></div>
+              )
+            }} />
+          <Route
+            path="/actors"
+            render={() => {
+              return (
+                <div><Actors /></div>
               )
             }} />
         </Switch >
